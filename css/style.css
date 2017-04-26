@@ -1,0 +1,149 @@
+html{
+    font-family: 'Raleway', sans-serif;
+}
+.container{
+    display: flex;
+ }
+
+ body{
+     border: 1px solid grey;
+     margin: 10px;
+ }
+h1{ 
+    padding-top: 15px;
+    text-align: center;
+    font-size: 40px;
+}
+
+h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+article{
+    text-align: center;
+    border: 1px solid blue;
+    flex: 1;
+    margin: 16px;
+    padding: 36px;
+}
+
+section article:nth-child(2){
+    flex:2;
+}
+img{
+   max-width:100%;
+   margin-bottom: 10px;
+}
+
+section article p {
+    text-align: left;
+}
+img.mobile{
+    display:none;
+}
+img.viewport{
+    display:inline-block;
+}
+p{
+    font-weight: 400;
+    font-style: italic;
+}
+@media screen and (max-width:1152px){
+    .container{
+        flex-direction: column;
+    }
+   
+    section article:first-child{
+        order:2;
+    }
+    section article:last-child{
+        order:1;
+    }
+    section article:nth-child(2){
+        order:3;
+    }
+    img.mobile{
+    display:inline-block;
+    }
+    img.viewport{
+        display:none;
+    }
+}
+
+
+ul{
+    display: flex;
+    margin-top: 5px;
+    
+}
+ul li{
+    padding-right: 9px;
+}
+.nav-burger{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+  }
+
+.hamburguesa{
+    display: none;
+}
+@media screen and (max-width:650px){
+  .hamburguesa{
+    display: inline-block;
+    margin-right: 15px;
+    margin-top: 13px;
+    font-size: 30px;
+  } 
+  ul{
+      display: none;
+  }
+  
+}
+
+/*p{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+/*pseudoelementos
+p:before{
+    content:'*';
+    font-size: 50px;
+    font-style: italic;
+    color: chocolate;
+    position: relative;
+    top: 15px;
+}
+p:after{
+    content:'-';
+    font-size: 50px;
+    font-style: italic;
+    color: chocolate;
+}*/
+
+/*pseudoselectores
+ul li{
+    list-style: none;
+}
+ul li:first-child{
+    color:darkblue;
+    font-weight: bold;
+    
+}
+ul li:last-child{
+    color:darkblue;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+ul li:nth-child(2){
+    color:deeppink;
+
+}
+ul li:nth-child(odd){
+    background-color: aquamarine;
+}
+ul li:nth-child(even){
+    background-color: lightgray;
+}*/
